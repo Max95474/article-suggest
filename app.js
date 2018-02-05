@@ -17,6 +17,7 @@ app.use(morgan('dev'))
 require('./swagger')(app)
 
 app.use(routes.articleRoutes())
+app.use(routes.paragraphRoutes())
 
 app.use(function (err, req, res, next) {
   console.error(`[ERROR] ${err}`)

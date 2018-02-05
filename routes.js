@@ -3,20 +3,29 @@
 const Router = require('express-promise-router')
 
 const article = require('./controllers/article')
+const paragraph = require('./controllers/paragraph')
 
 function articleRoutes() {
   const router = new Router()
 
   router
-    .get('/article', article.get)
-    .post('/article', article.save)
+    .post('/article', article.parse)
+    .get('/articles', article.getAll)
+
+  return router
+}
+
+function paragraphRoutes() {
+  const router = new Router()
+
   router
-    .put('/article/:id', article.update)
-    .delete('/article/:id', article.remove)
+    .post('/paragraph/suggest/:id', paragraph.suggest)
+    .post('/paragraph/approve/:paragraph/:suggest', paragraph.approve)
 
   return router
 }
 
 module.exports = {
-  articleRoutes
+  articleRoutes,
+  paragraphRoutes
 }

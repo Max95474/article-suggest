@@ -9,14 +9,7 @@ const ArticleSchema = new Schema({
     type: String,
     required: true
   },
-  originalText: {
-    type: String,
-    required: true
-  },
-  usersText: {
-    type: String,
-    required: true
-  }
+  paragraphs: [{type: Schema.Types.ObjectId, ref: 'Paragraph'}]
 })
 
 module.exports = mongoose.model('Article', ArticleSchema)

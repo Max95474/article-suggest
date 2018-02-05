@@ -22,7 +22,8 @@ function swagger(app) {
       'http'
     ],
     apis: [
-      './controllers/article.js'
+      './controllers/article.js',
+      './controllers/paragraph.js'
     ]
   }
 
