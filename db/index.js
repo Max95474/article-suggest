@@ -5,7 +5,7 @@ const fs = require('fs')
 const path = require('path')
 const _ = require('lodash')
 
-mongoose.connect("mongodb://localhost:27017/article-suggest")
+mongoose.connect("mongodb://mongo:27017/article-suggest")
   .catch(err => {
     console.log('Mongoose error: ', err)
     process.exit(1)
