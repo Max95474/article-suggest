@@ -28,3 +28,5 @@ app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}...`)
   console.log("Discover server's API /docs")
 })
+
+module.exports = app

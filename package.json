@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "npm test"
+    "start": "npm test --exit && node app.js",
+    "test": "mocha --exit"
   },
   "author": "Max",
   "license": "ISC",
@@ -23,5 +23,10 @@
     "swagger-jsdoc": "^1.9.7",
     "swagger-ui-express": "^2.0.15",
     "body-parser": "latest"
+  },
+  "devDependencies": {
+    "mocha": "^5.0.0",
+    "should": "^13.2.1",
+    "supertest": "^3.0.0"
   }
 }
