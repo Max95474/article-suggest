@@ -10,6 +10,9 @@ function articleRoutes() {
   router
     .get('/article', article.get)
     .post('/article', article.save)
+  router
+    .put('/article/:id', article.update)
+    .delete('/article/:id', article.remove)
 
   return router
 }

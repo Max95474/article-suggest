@@ -17,8 +17,8 @@ fs
   .readdirSync(path.join(__dirname, 'models'))
   .filter(file =>(file.indexOf('.') !== 0) && (file !== 'index.js'))
   .forEach(file => {
-    const model = require(path.join(__dirname, file))
-    db[model.name] = model;
+    const model = require(path.join(__dirname, 'models', file))
+    db[model.modelName] = model;
   });
 
 module.exports = db
